@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "import",
+      "type": "java.lang.String",
+      "description": "Description for import."
+    },
+    {
+      "name": "import",
+      "type": "java.lang.String",
+      "description": "Description for import."
+    }
+  ] }

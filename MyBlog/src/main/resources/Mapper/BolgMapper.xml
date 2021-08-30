@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.myblog.mapper.BlogMapper"><!--mapper包下UserMapper接口文件-->
+
+    <insert id="createnewblog">
+        insert into blog (title,text,author,createtime,updatetime) VALUE (#{title},#{text},#{author},#{createtime},#{updatetime});
+    </insert>
+    <select id="showallblog" resultType="Blog">
+        select*from blog;
+    </select>
+    <select id="getbyblogname" resultType="Blog">
+        select*from blog where title like #{title};
+    </select>
+    <delete id="deleteblog">
+        delete from blog where id=#{id};
+    </delete>
+    <select id="findblogbytitle" resultType="Blog">
+        select*from blog where title=#{title};
+    </select>
+    <select id="findblogbyid" resultType="Blog">
+        select*from blog where id=#{id};
+    </select>
+    <update id="updateblogtitle">
+        update blog SET title=#{title},updatetime=#{date} where id=#{id};
+    </update>
+    <update id="updateblogtext">
+        update blog SET text=#{text},updatetime=#{date} where id=#{id};
+    </update>
+</mapper>
