@@ -15,11 +15,11 @@ public class MyConfig implements WebMvcConfigurer {
         registry.addViewController("/main.html").setViewName("blogs");//设定用户界面由main.html跳转到blogs.html
     }
 
-   /* @Override
+    @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor())
         .addPathPatterns("/**")//拦截localhost8080下页面
         .excludePathPatterns("/index.html","/","/css/**","/js/**","/user/login","/user/register","/register.html");
         //不拦截localhost8080，以及主页面，登录请求，登出请求，注册请求，和静态资源
-    }*/
+    }
 }
